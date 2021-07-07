@@ -34,4 +34,6 @@ router.get('/:usuario', async function(req, res, next){
         next(err);
     }
 });
+
+
 module.exports = router;

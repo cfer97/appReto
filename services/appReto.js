@@ -31,7 +31,7 @@ async function getData(page = 1){
  * @returns  message
  */
 async function usuarioNuevo(usuario){
-    let sql = 'INSERT INTO usuario VALUES (NULL, ?, ?, ?, 2)';
+    let sql = 'INSERT INTO usuario VALUES (NULL, ?, ?, ?, 1)';
     const result = await db.query(
         sql,
         [
@@ -55,7 +55,7 @@ async function usuarioNuevo(usuario){
  * @returns message
  */
 async function login(usuario){
-    let sql = 'SELECT idRol, usuario, password FROM usuario WHERE usuario = ?';
+    let sql = 'SELECT * FROM usuario WHERE usuario = ?';
     const result = await db.query(
         sql,
         [
